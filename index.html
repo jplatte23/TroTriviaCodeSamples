@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Join | TroTrivia</title>
+        <link rel="stylesheet" href="./index.css">
+        <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="./useraccount.html">Account</a></li>
+                    <li><a href="./register.html" id="registerLink">Register</a></li>
+                    <li><a href="./signin.html" id="loginLink">LogIn</a></li>
+                    <li><a href="#" id="logoutLink" style="display:none;" onclick="logout()">LogOut</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <main>
+            <h1 id="title">Join a Game</h1>
+            <form action="./playerLobby.html" method="post">
+                <div class="form-field">
+                    <label for="name" id="nameLabel">Display Name</label>
+                    <input type="text" id="name" name="name" autofocus />
+                </div>
+                <div class="form-field">
+                    <label for="pin" id="pinLabel">Game Pin</label>
+                    <input type="number" id="pin" name="pin" />
+                </div>
+                <div class="form-field">
+                    <button type="submit" id="joinButton">Join</button>
+                </div>
+            </form>
+            <div class="host-link">
+                <a href="./selectGame.html" id="host">Click here to host a TroTrivia!</a>
+            </div>
+        </main>
+        <script>
+            // Check if the user is logged in when the page loads
+            window.onload = function() {
+                const isLoggedIn = localStorage.getItem('isLoggedIn');
+    
+                // Get the link element
+                const hostLink = document.getElementById('host');
+                const regLink = document.getElementById('registerLink');
+                const loginLink = document.getElementById('loginLink');
+                const logoutLink = document.getElementById('logoutLink');
+                
+                // Only show the link if the user is logged in
+                if (isLoggedIn) {
+                    hostLink.style.display = 'inline'; // Change this to 'block' or your preferred display style if necessary
+                    regLink.style.display = 'none';
+                    loginLink.style.display = 'none';
+                    logoutLink.style.display = 'block';
+    
+                } else {
+                    hostLink.style.display = 'none'; // Ensure the link is not displayed if not logged in
+                    regLink.style.display = 'block';
+                    loginLink.style.display = 'block';
+                    logoutLink.style.display = 'none';
+                }
+            };
+    
+            function logout(){
+                localStorage.removeItem('isLoggedIn');
+            }
+        </script>
+    </body>
+</html>

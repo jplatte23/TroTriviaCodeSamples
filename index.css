@@ -1,0 +1,98 @@
+
+
+body {
+    background-color:  #990000;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+main{
+    text-align: center;
+}
+
+nav {
+    background-color: #ffffff; /* Change to a simple light background */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Adds subtle shadow for depth */
+    font-family: 'Raleway', sans-serif;
+    text-align: center; /* Center-align the navigation links */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Use flexbox for horizontal layout */
+    justify-content: center; /* Center content in the nav bar */
+    align-items: center;
+}
+
+nav ul li {
+    padding: 10px 20px; /* Spacing around each nav item */
+}
+
+nav a {
+    text-decoration: none;
+    color: #333; /* Dark color for text */
+    font-weight: bold;
+    transition: color 0.3s; /* Smooth transition for hover effect */
+}
+
+nav a:hover {
+    color: #017bff; /* Blue color on hover for visual feedback */
+}
+
+/* Styling for other elements unchanged */
+#title {
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+    font-size: 50px;
+    color: white;
+}
+
+#name, #pin {
+    width: 50%;
+    padding: 12px 0;
+    margin: 8px auto; /* Center align inputs */
+    display: block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 20px;
+    text-align: center;
+}
+
+#label {
+    display: block;
+    text-align: center;
+    font-size: 25px;
+    font-family: 'Raleway', sans-serif;
+    color: white;
+}
+
+#host {
+    color: white;
+    text-decoration: none;
+}
+
+#host:hover {
+    text-decoration: underline;
+}
+
+#joinButton {
+    width: 50%;
+    background-color: #FFC72C; /* Consistent background color */
+    color: white;
+    padding: 14px 20px;
+    margin: 8px auto; /* Center align button */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    display: block;
+    font-size: 20px;
+    font-family: 'Raleway', sans-serif;
+}
+
+#nameLable{
+    text-align: center;
+}
